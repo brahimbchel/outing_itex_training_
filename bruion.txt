@@ -1,0 +1,31 @@
+  const navigate = useNavigate()
+
+  const handleSubmit = () => {
+    const result = prompt("enter your age")
+    const age = parseInt(result as string)
+
+    if (age > 18) {
+      navigate('/about')
+    } else {
+      alert('you are not allowed')
+    }
+  }
+
+
+  <button onClick={handleSubmit}>Submit</button>
+
+      <nav>
+        <ul>
+          <li>
+            <Link to={'/'}>Home</Link>
+          </li>
+          <li>
+            <Link to={'/about'}>About</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
